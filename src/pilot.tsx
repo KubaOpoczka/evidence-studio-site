@@ -2,36 +2,38 @@ import "@fontsource-variable/archivo/wdth.css";
 import "@fontsource-variable/manrope/wght.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { SpecialistReviewForm } from "./components/SpecialistReviewForm";
+import { PilotBriefForm } from "./components/PilotBriefForm";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { contactHref } from "./lib/site";
 import "./styles.css";
 
-function ReviewPage() {
+function PilotPage() {
   return (
     <>
-      <a className="skip-link" href="#review-main">Skip to specialist review</a>
+      <a className="skip-link" href="#pilot-main">Skip to pilot brief</a>
       <header className="site-header">
-        <nav className="site-nav shell" aria-label="Specialist review navigation">
+        <nav className="site-nav shell" aria-label="Pilot brief navigation">
           <a className="brand" href="./index.html" aria-label="Evidence Studio home">
             <img src="./assets/icon.png" alt="" width="34" height="34" />
             <span>Evidence Studio</span>
           </a>
           <div className="nav-actions">
+            <a className="review-demo-link" href="./index.html#agency">Pilot scope</a>
             <a className="review-demo-link" href="./index.html#demo">Try the demo</a>
             <ThemeToggle />
           </div>
         </nav>
       </header>
 
-      <main id="review-main" tabIndex={-1}>
-        <section className="review-hero shell-wide" aria-labelledby="review-title">
+      <main id="pilot-main" tabIndex={-1}>
+        <section className="review-hero shell-wide" aria-labelledby="pilot-title">
           <div className="review-hero-copy">
-            <h1 id="review-title">
-              <span>Tell us where audit</span>
-              <span>reporting breaks.</span>
+            <p className="section-label">One anonymized workflow · €750 fixed scope</p>
+            <h1 id="pilot-title">
+              <span>Scope one audit.</span>
+              <span>Keep the proof together.</span>
             </h1>
-            <p>Answer six practical questions. Nothing leaves this page until you prepare an email.</p>
+            <p>Map one existing audit-to-report workflow into a sample project, export, and written handoff notes. One licence is included and the agreed pilot is delivered within five working days.</p>
           </div>
           <figure className="review-hero-media">
             <picture>
@@ -53,15 +55,15 @@ function ReviewPage() {
               <img
                 src="./assets/evidence-redacted.png"
                 alt="Protected client evidence with private details covered"
-                width="1440"
-                height="900"
+                width="1180"
+                height="740"
               />
             </picture>
           </figure>
         </section>
 
-        <section className="review-section shell-wide" aria-label="Evidence Studio specialist review form">
-          <SpecialistReviewForm />
+        <section className="review-section shell-wide" aria-label="Evidence Studio pilot brief form">
+          <PilotBriefForm />
         </section>
       </main>
 
@@ -71,10 +73,9 @@ function ReviewPage() {
             <img src="./assets/icon.png" alt="" width="34" height="34" />
             <span>Evidence Studio</span>
           </a>
-          <p>Critical feedback is welcome.</p>
+          <p>Scope, inputs, timing, price, and payment are agreed before work starts.</p>
           <div className="footer-links">
             <a href={contactHref}>Contact</a>
-            <a href="/support">Support</a>
             <a href="/privacy">Privacy</a>
             <a href="/terms">Terms</a>
           </div>
@@ -86,6 +87,6 @@ function ReviewPage() {
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ReviewPage />
+    <PilotPage />
   </StrictMode>,
 );

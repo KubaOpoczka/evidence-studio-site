@@ -25,5 +25,7 @@ describe("buildSampleReport", () => {
     expect(report).toContain("Logo &lt;img&gt;");
     expect(report).toContain("Fixed");
     expect(report).not.toContain("<script>alert(1)</script>");
+    expect(report).toContain("script-src 'none'");
+    expect(report).toContain('<meta name="referrer" content="no-referrer">');
   });
 });

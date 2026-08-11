@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { findings, outcomeLabels, type RetestOutcome } from "../data/demo";
 import { downloadSampleReport } from "../lib/exportReport";
+import { agencyPilotHref, checkoutHref, checkoutIsLive } from "../lib/site";
 
 const initialFinding = findings[0];
 
@@ -284,9 +285,22 @@ export function PremiumDemo() {
               Prepare sample report
             </button>
             {prepared ? (
-              <button type="button" className="button button-secondary button-wide" onClick={exportReport}>
-                Download HTML report
-              </button>
+              <>
+                <button type="button" className="button button-secondary button-wide" onClick={exportReport}>
+                  Download HTML report
+                </button>
+                <div className="demo-conversion" aria-label="Continue with Evidence Studio">
+                  <strong>Ready to use this workflow on real client work?</strong>
+                  <a className="button button-primary button-wide" href={checkoutHref}>
+                    {checkoutIsLive
+                      ? "Use it on unlimited client work — €99 once"
+                      : "Review the €99 founding licence"}
+                  </a>
+                  <a className="button button-secondary button-wide" href={agencyPilotHref}>
+                    Pilot one anonymized audit — €750
+                  </a>
+                </div>
+              </>
             ) : null}
           </div>
         </aside>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="A local-first accessibility audit reporting workflow covering data control, explicit exports, backups, redaction and honest limitations."
+    />
+    <link
+      rel="canonical"
+      href="https://evidence-studio-site.pages.dev/local-accessibility-audit-reporting.html"
+    />
+    <link rel="stylesheet" href="/field-guide.css" />
+    <title>Local-first accessibility audit reporting | Evidence Studio</title>
+    <meta
+      property="og:title"
+      content="Local-first accessibility audit reporting"
+    />
+    <meta
+      property="og:description"
+      content="Keep audit evidence on the reviewer's device without confusing local storage with a backup."
+    />
+    <meta property="og:type" content="article" />
+  </head>
+  <body>
+    <main class="wrap">
+      <a class="brand" href="/"
+        ><img src="/assets/icon.png" alt="" />Evidence Studio</a
+      >
+      <p class="eyebrow">Workflow guide</p>
+      <h1>Local-first is a boundary, not a backup.</h1>
+      <p class="lede">
+        Keeping project content on the reviewer’s device reduces routine data
+        movement. It does not remove the need for access control, recovery
+        copies, retention rules or careful exports.
+      </p>
+      <div class="meta">
+        <span>7 minute read</span><span>updated 11 Aug 2026</span
+        ><span>for audit teams</span>
+      </div>
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th>Local-first helps with</th>
+            <th>It does not solve by itself</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Keeping draft findings and screenshots out of a vendor database
+              during normal use
+            </td>
+            <td>A stolen, shared or unmanaged reviewer device</td>
+          </tr>
+          <tr>
+            <td>Making export an explicit reviewer action</td>
+            <td>What happens after an exported file is emailed or uploaded</td>
+          </tr>
+          <tr>
+            <td>Working without a hosted project account</td>
+            <td>Browser profile loss, disk failure or accidental deletion</td>
+          </tr>
+          <tr>
+            <td>Limiting the product operator's access to project content</td>
+            <td>
+              The client's retention, legal or incident-response requirements
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>A recoverable local-first workflow</h2>
+      <ol class="checklist">
+        <li>
+          <strong>Agree the data boundary.</strong> Decide which client data may
+          enter the project, which details must be anonymized, who may use the
+          review profile and how long evidence is retained.
+        </li>
+        <li>
+          <strong>Use a managed review environment.</strong> Apply device
+          encryption, screen lock, browser profile separation and organization
+          policy appropriate to the sensitivity of the audit.
+        </li>
+        <li>
+          <strong>Capture only what is needed.</strong> Screenshots and page
+          context can contain personal information far outside the finding. Crop
+          or redact the shareable copy and keep the original only when it has a
+          justified purpose.
+        </li>
+        <li>
+          <strong>Name projects and exports safely.</strong> Filenames leak
+          context. Use identifiers that work with the client’s classification
+          and ticketing policy.
+        </li>
+        <li>
+          <strong>Create explicit recovery copies.</strong> Browser storage can
+          disappear. Export a project backup to an approved encrypted location
+          at defined milestones, then test that it can be restored.
+        </li>
+        <li>
+          <strong>Review every report before release.</strong> Treat export as a
+          publication boundary. Check sensitive text, images, hidden content,
+          metadata, scope statements and report accessibility.
+        </li>
+        <li>
+          <strong>Close the project deliberately.</strong> Confirm delivery,
+          archive the approved artifacts, delete working copies according to
+          policy and record what was retained.
+        </li>
+      </ol>
+      <h2>Questions for an agency workflow review</h2>
+      <ul>
+        <li>
+          Where do findings, screenshots, scanner results and retest decisions
+          live today?
+        </li>
+        <li>Which copy is the source of truth when evidence conflicts?</li>
+        <li>Who reviews redaction and report accessibility before release?</li>
+        <li>
+          Can a second specialist reproduce a finding without asking the
+          original tester?
+        </li>
+        <li>
+          Can the team recover a project after loss of the browser profile?
+        </li>
+      </ul>
+      <div class="callout">
+        <p>
+          <strong>Evidence Studio's designed boundary:</strong> project content
+          remains in Chrome during the normal workflow; reports and backups
+          leave only when the reviewer exports them. Licence validation does not
+          include project content. The full, specific behavior is documented in
+          the privacy notice.
+        </p>
+      </div>
+      <section class="cta">
+        <h2>Pilot the workflow on one anonymized audit.</h2>
+        <p>
+          The fixed-scope agency pilot maps one current workflow, configures a
+          sample project and delivers written notes without requiring a sales
+          call.
+        </p>
+        <a class="button" href="/#agency">See the €750 pilot</a>
+      </section>
+      <section class="sources">
+        <h2>Primary sources</h2>
+        <ul>
+          <li>
+            <a href="https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/"
+              >W3C WCAG-EM evaluation methodology</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://cheatsheetseries.owasp.org/cheatsheets/Data_Security_Cheat_Sheet.html"
+              >OWASP Data Security Cheat Sheet</a
+            >
+          </li>
+          <li><a href="/privacy">Evidence Studio privacy notice</a></li>
+        </ul>
+      </section>
+      <footer>
+        Evidence Studio · <a href="/privacy">privacy</a> ·
+        <a href="/terms">terms</a> · not legal advice
+      </footer>
+    </main>
+  </body>
+</html>

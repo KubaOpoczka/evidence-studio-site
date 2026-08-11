@@ -2,21 +2,26 @@
 <html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'"
+    />
+    <meta name="referrer" content="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#11120f" />
     <meta
       name="description"
       content="Review the Evidence Studio accessibility reporting workflow and share direct product and pricing feedback."
     />
-    <link rel="canonical" href="https://smellybricc.github.io/evidence-studio-site/review.html" />
+    <link rel="canonical" href="https://evidence-studio-site.pages.dev/review" />
     <meta property="og:title" content="Specialist review | Evidence Studio" />
     <meta
       property="og:description"
       content="Six practical questions about accessibility reporting, workflow pain, and realistic pricing."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://smellybricc.github.io/evidence-studio-site/review.html" />
-    <meta property="og:image" content="https://smellybricc.github.io/evidence-studio-site/og-image.jpg" />
+    <meta property="og:url" content="https://evidence-studio-site.pages.dev/review" />
+    <meta property="og:image" content="https://evidence-studio-site.pages.dev/og-image.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <title>Specialist review | Evidence Studio</title>
     <link rel="icon" type="image/png" href="./assets/icon.png" />
@@ -36,17 +41,7 @@
       media="(max-width: 900px)"
       fetchpriority="high"
     />
-    <script>
-      (() => {
-        try {
-          const stored = localStorage.getItem("evidence-studio-theme");
-          const preferred = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-          document.documentElement.dataset.theme = stored || preferred;
-        } catch {
-          document.documentElement.dataset.theme = "dark";
-        }
-      })();
-    </script>
+    <script type="module" src="/theme-bootstrap.js"></script>
   </head>
   <body>
     <div id="root"></div>

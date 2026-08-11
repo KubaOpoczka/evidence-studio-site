@@ -33,6 +33,8 @@ export const buildSampleReport = ({ finding, selectedSources, redacted, outcome 
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'none'; style-src 'unsafe-inline'; img-src data:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
     <title>${escapeHtml(finding.id)} sample accessibility report</title>
     <style>
       :root{font-family:Arial,sans-serif;color:#18201b;background:#f5f6f0}body{margin:0}main{max-width:760px;margin:auto;padding:48px 24px 80px}header{border-bottom:4px solid #18201b;padding-bottom:28px;margin-bottom:48px}.sample{font-size:14px;font-weight:700;color:#52605a}h1{font-size:42px;line-height:1.05;margin:10px 0 14px}h2{margin-top:36px;font-size:22px}p,li{font-size:17px;line-height:1.6}.meta{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}.meta div{border-left:3px solid #73a51d;padding-left:12px}.meta span,li span{display:block;color:#52605a;font-size:14px}.outcome{display:inline-block;border:2px solid #18201b;padding:8px 12px;font-weight:700}li{margin-bottom:14px}@media(max-width:560px){.meta{grid-template-columns:1fr}h1{font-size:32px}}@media print{body{background:#fff}main{padding-top:20px}}

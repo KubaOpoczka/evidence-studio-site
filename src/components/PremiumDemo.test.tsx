@@ -33,6 +33,8 @@ describe("PremiumDemo", () => {
 
     expect(screen.getByRole("button", { name: /download html report/i })).toBeInTheDocument();
     expect(screen.getByText(/sample report prepared/i)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /€99 founding licence/i })).toHaveAttribute("href", "/review");
+    expect(screen.getByRole("link", { name: /pilot one anonymized audit — €750/i })).toHaveAttribute("href", "/pilot");
   });
 
   it("loads the completed example in one action", async () => {
@@ -44,5 +46,7 @@ describe("PremiumDemo", () => {
     expect(screen.getByRole("switch", { name: /protect the client copy/i })).toBeChecked();
     expect(screen.getByRole("radio", { name: "Fixed" })).toBeChecked();
     expect(screen.getByRole("button", { name: /download html report/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /€99 founding licence/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /pilot one anonymized audit — €750/i })).toBeInTheDocument();
   });
 });

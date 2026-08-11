@@ -9,8 +9,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
+        pilot: resolve(__dirname, "pilot.html"),
         review: resolve(__dirname, "review.html"),
         privacy: resolve(__dirname, "privacy.html"),
+        support: resolve(__dirname, "support.html"),
         terms: resolve(__dirname, "terms.html"),
       },
     },

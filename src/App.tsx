@@ -1,7 +1,7 @@
 import { PremiumDemo } from "./components/PremiumDemo";
 import { Reveal } from "./components/Reveal";
 import { ThemeToggle } from "./components/ThemeToggle";
-import { checkoutHref, checkoutIsLive, contactHref } from "./lib/site";
+import { agencyPilotHref, checkoutHref, checkoutIsLive, chromeWebStoreHref, contactHref } from "./lib/site";
 
 const workflowWords = ["Capture context", "Connect results", "Protect evidence", "Retest", "Report"];
 
@@ -19,12 +19,16 @@ export default function App() {
           <div className="nav-links">
             <a href="#workflow">Workflow</a>
             <a href="#demo">Try premium</a>
-            <a href="#founding">Price</a>
+            <a href="#offers">Plans</a>
+            <a href="#agency">Agency pilot</a>
+            <a href="#resources">Guides</a>
             <a href="#questions">Questions</a>
           </div>
           <div className="nav-actions">
             <ThemeToggle />
-            <a className="nav-cta" href="#founding">Founding offer</a>
+            <a className="nav-cta" href={checkoutHref}>
+              {checkoutIsLive ? "Get licence — €99" : "Join specialist review"}
+            </a>
           </div>
         </nav>
       </header>
@@ -32,17 +36,21 @@ export default function App() {
       <main id="main-content" tabIndex={-1}>
         <section className="hero shell" id="top" aria-labelledby="hero-title">
           <div className="hero-title">
+            <p className="hero-audience">For accessibility specialists and audit teams</p>
             <h1 id="hero-title">
-              <span>Make proof</span>
-              <span>impossible to ignore.</span>
+              <span>Audit evidence.</span>
+              <span>Ready for handoff.</span>
             </h1>
           </div>
 
           <div className="hero-copy">
-            <p>Capture context, protect sensitive evidence, and turn retests into client-ready proof.</p>
+            <p>Keep page state, screenshots, repeated occurrences, and retests together in one local Chrome workflow—then export client-ready reports.</p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#demo">Try the premium demo</a>
-              <a className="button button-secondary" href="#founding">See founding price</a>
+              <a className="button button-primary" href={checkoutHref}>
+                {checkoutIsLive ? "Get licence — €99" : "Join specialist review"}
+              </a>
+              <a className="button button-secondary" href="#agency">Agency pilot — €750</a>
+              <a className="hero-free-link" href={chromeWebStoreHref}>Try one project free in Chrome →</a>
             </div>
           </div>
 
@@ -207,6 +215,58 @@ export default function App() {
           </div>
         </section>
 
+        <section className="offer-map-section shell" id="offers" aria-labelledby="offers-title">
+          <Reveal className="section-intro offer-map-intro">
+            <p className="section-label">Choose by workflow, not feature theatre</p>
+            <h2 id="offers-title">Start free. Buy the licence. Or prove it on one audit.</h2>
+            <p>Each path uses the same local-first workflow. The difference is project capacity, export access, and whether you want founder-assisted setup.</p>
+          </Reveal>
+
+          <div className="offer-map-grid">
+            <article className="offer-card">
+              <p className="offer-card-label">Explore</p>
+              <h3>Free</h3>
+              <strong>One local project</strong>
+              <ul>
+                <li>Manual and supported imported findings</li>
+                <li>Page evidence, redaction, and retests</li>
+                <li>Report preview plus backup and restore</li>
+              </ul>
+              <a className="button button-secondary" href={chromeWebStoreHref}>Try one project free</a>
+            </article>
+
+            <article className="offer-card offer-card-featured">
+              <p className="offer-card-label">For one specialist</p>
+              <h3>Founding licence</h3>
+              <strong>€99 once</strong>
+              <ul>
+                <li>Unlimited local projects and reports</li>
+                <li>HTML, CSV, Markdown, and statement exports</li>
+                <li>Perpetual version 1 access and 12 months of updates</li>
+              </ul>
+              <a className="button button-primary" href={checkoutHref}>
+                {checkoutIsLive ? "Get founding licence" : "Join specialist review"}
+              </a>
+              <a className="offer-proof-link" href="/sample-accessibility-report">Open the sample report →</a>
+            </article>
+
+            <article className="offer-card">
+              <p className="offer-card-label">For audit teams and agencies</p>
+              <h3>Workflow pilot</h3>
+              <strong>€750 fixed scope</strong>
+              <ul>
+                <li>Map one anonymized audit-to-report workflow</li>
+                <li>Receive a sample project, export, and written notes</li>
+                <li>One licence included; delivery within five working days</li>
+              </ul>
+              <a className="button button-secondary" href="#agency">Review the pilot scope</a>
+              <a className="offer-proof-link" href="#demo">Try the interactive workflow →</a>
+            </article>
+          </div>
+
+          <p className="offer-proof-note">Decide from the product itself: try the workflow, inspect the sample report, and review the local-data boundaries before paying.</p>
+        </section>
+
         <section className="founding-section shell" id="founding" aria-labelledby="founding-title">
           <Reveal>
             <div className="founding-layout">
@@ -216,26 +276,76 @@ export default function App() {
                 <p>Perpetual access to version 1, plus 12 months of product updates.</p>
               </div>
               <div className="founding-terms">
-                <h3>What the proposed licence includes</h3>
+                <h3>What the founding licence includes</h3>
                 <ul>
                   <li>One specialist user</li>
                   <li>Unlimited local projects and reports</li>
                   <li>Accessible HTML report export</li>
                   <li>Local backup and restore</li>
-                  <li>Refund if the promised product is not delivered</li>
+                  <li>30-day money-back guarantee</li>
                 </ul>
                 <p className="validation-note">
-                  Demand is not proven yet. The first paid offer is planned for 25 specialist licences so the release can be tested responsibly.
+                  The founding release is deliberately limited to 25 specialist licences, keeping support direct while the first professional workflows are proven.
                 </p>
-                <a className="button button-primary founding-cta" href={checkoutHref}>
-                  {checkoutIsLive ? "Get founding licence" : "Join specialist review"}
-                </a>
+                <div className="founding-actions">
+                  <a className="button button-primary founding-cta" href={checkoutHref}>
+                    {checkoutIsLive ? "Get founding licence" : "Join specialist review"}
+                  </a>
+                  <a className="button button-secondary founding-cta" href={chromeWebStoreHref}>
+                    Install extension
+                  </a>
+                </div>
                 {!checkoutIsLive ? (
                   <p className="cta-note">Answer six questions. Nothing is sent until you choose to open an email.</p>
                 ) : null}
               </div>
             </div>
           </Reveal>
+        </section>
+
+        <section className="agency-section shell-wide" id="agency" aria-labelledby="agency-title">
+          <Reveal>
+            <div className="agency-layout">
+              <div className="agency-heading">
+                <p className="section-label">For audit teams and agencies</p>
+                <h2 id="agency-title">Make one evidence workflow repeatable.</h2>
+                <p>A fixed-scope, async pilot built around one anonymized audit—not a consulting retainer and no sales call required.</p>
+              </div>
+              <div className="agency-offer">
+                <div className="agency-price"><strong>€750</strong><span>one workflow pilot</span></div>
+                <ul>
+                  <li>Map one existing audit-to-report workflow</li>
+                  <li>Configure one sample Evidence Studio project</li>
+                  <li>Deliver a sample export and written workflow notes</li>
+                  <li>Include one founding specialist licence</li>
+                  <li>Complete the agreed pilot within five working days</li>
+                </ul>
+                <p>The sample must be anonymized. Scope, inputs, timing and payment are confirmed by email before work starts.</p>
+                <a className="button button-primary" href={agencyPilotHref}>Send the pilot brief</a>
+              </div>
+            </div>
+          </Reveal>
+        </section>
+
+        <section className="resources-section shell" id="resources" aria-labelledby="resources-title">
+          <Reveal>
+            <p className="section-label">Field guides</p>
+            <h2 id="resources-title">Keep the finding and its proof together.</h2>
+          </Reveal>
+          <div className="resource-grid">
+            <a className="resource-link" href="/accessibility-audit-evidence-checklist.html">
+              <span>Checklist</span>
+              <h3>Accessibility audit evidence checklist</h3>
+              <p>The minimum context, screenshot, decision and retest evidence that makes a finding usable.</p>
+              <strong>Read the checklist →</strong>
+            </a>
+            <a className="resource-link" href="/local-accessibility-audit-reporting.html">
+              <span>Workflow guide</span>
+              <h3>Local-first accessibility audit reporting</h3>
+              <p>What local-first protects, what it does not, and how to build a recoverable client workflow.</p>
+              <strong>Read the guide →</strong>
+            </a>
+          </div>
         </section>
 
         <section className="questions-section shell" id="questions" aria-labelledby="questions-title">
@@ -263,6 +373,10 @@ export default function App() {
               <summary>Will it certify a website as compliant?</summary>
               <p>No. It supports professional evidence and reporting. It does not provide legal advice or replace a qualified accessibility assessment.</p>
             </details>
+            <details>
+              <summary>Is the agency pilot part of the €99 licence?</summary>
+              <p>No. The founding licence is the self-serve product. The €750 pilot is a separate fixed-scope professional service for one anonymized workflow, agreed by email before payment.</p>
+            </details>
           </div>
         </section>
       </main>
@@ -276,9 +390,12 @@ export default function App() {
           <p>Accessibility evidence that holds together.</p>
           <div className="footer-links">
             <a href={contactHref}>Contact</a>
-            <a href="./privacy.html">Privacy</a>
-            <a href="./terms.html">Terms</a>
-            <a href="./sample-accessibility-report.html">Static sample report</a>
+            <a href={agencyPilotHref}>Pilot brief</a>
+            <a href="/support">Support</a>
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+            <a href="#resources">Field guides</a>
+            <a href="/sample-accessibility-report">Static sample report</a>
           </div>
         </div>
       </footer>

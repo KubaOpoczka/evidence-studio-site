@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="A practical accessibility audit evidence checklist for findings, screenshots, decisions, repeated occurrences, retests and client-ready reports."
+    />
+    <link
+      rel="canonical"
+      href="https://evidence-studio-site.pages.dev/accessibility-audit-evidence-checklist.html"
+    />
+    <link rel="stylesheet" href="/field-guide.css" />
+    <title>Accessibility audit evidence checklist | Evidence Studio</title>
+    <meta
+      property="og:title"
+      content="Accessibility audit evidence checklist"
+    />
+    <meta
+      property="og:description"
+      content="The minimum evidence chain that makes a finding understandable, actionable and retestable."
+    />
+    <meta property="og:type" content="article" />
+  </head>
+  <body>
+    <main class="wrap">
+      <a class="brand" href="/"
+        ><img src="/assets/icon.png" alt="" />Evidence Studio</a
+      >
+      <p class="eyebrow">Professional field guide</p>
+      <h1>Make every finding retestable.</h1>
+      <p class="lede">
+        A finding is useful when another person can understand the barrier,
+        locate it, reproduce it, fix it and confirm the result. This checklist
+        keeps that evidence chain intact.
+      </p>
+      <div class="meta">
+        <span>8 minute read</span><span>updated 11 Aug 2026</span
+        ><span>human review required</span>
+      </div>
+      <div class="callout">
+        <p>
+          <strong
+            >This is a workflow checklist, not a compliance standard.</strong
+          >
+          Adapt it to the applicable standard, audit methodology, client
+          agreement and the needs of disabled users.
+        </p>
+      </div>
+      <h2>Finding-level evidence</h2>
+      <ol class="checklist">
+        <li>
+          <strong>Tested page and state.</strong> Record the exact URL, page
+          title, authenticated state, modal or step, and any content variation
+          needed to reproduce the barrier.
+        </li>
+        <li>
+          <strong>Test conditions.</strong> Include browser, viewport, zoom,
+          language, relevant assistive technology and versions, contrast or
+          forced-colour state, and the input method used.
+        </li>
+        <li>
+          <strong>Human-readable problem.</strong> Describe what happens, who is
+          affected, and which task becomes difficult or impossible. Do not paste
+          scanner text as the final explanation.
+        </li>
+        <li>
+          <strong>Applicable requirement.</strong> Connect the finding to the
+          standard and version in scope. Preserve the specific criterion and the
+          reasoning used; avoid implying that one criterion explains every
+          effect.
+        </li>
+        <li>
+          <strong>Reproduction steps.</strong> Write the shortest reliable
+          sequence another tester can follow. Include expected and actual
+          outcomes.
+        </li>
+        <li>
+          <strong>Protected visual or technical evidence.</strong> Attach the
+          relevant screenshot, DOM excerpt or other evidence. Redact personal
+          and client data in the shareable copy while preserving the controlled
+          original where policy permits.
+        </li>
+        <li>
+          <strong>Occurrences and shared cause.</strong> Link repeated instances
+          without hiding their locations. Only group results when the same
+          corrective action genuinely applies.
+        </li>
+        <li>
+          <strong>Remediation guidance.</strong> State the desired behavior and
+          relevant implementation principle. Keep the development team
+          responsible for choosing code that fits its system.
+        </li>
+        <li>
+          <strong>Retest trail.</strong> Record the build or date, the same test
+          conditions, result, remaining occurrences and any regression evidence.
+          Do not overwrite the original finding.
+        </li>
+      </ol>
+      <h2>Before a client export</h2>
+      <ul>
+        <li>
+          Check every screenshot and free-text field for secrets, personal
+          information and unrelated customer data.
+        </li>
+        <li>
+          Make link text, headings, tables and status labels understandable
+          without relying on color.
+        </li>
+        <li>
+          Separate confirmed findings, observations, limitations and items not
+          tested.
+        </li>
+        <li>
+          State the sample and scope; do not imply that an evaluated subset
+          proves the entire product passes.
+        </li>
+        <li>
+          Open the exported report with a keyboard and at least one relevant
+          assistive technology.
+        </li>
+      </ul>
+      <section class="cta">
+        <h2>Build one finding in a working demo.</h2>
+        <p>
+          Evidence Studio keeps source results, protected screenshots,
+          decisions, occurrences and retests connected in a local project.
+        </p>
+        <a class="button" href="/#demo">Try the premium demo</a>
+      </section>
+      <section class="sources">
+        <h2>Primary sources</h2>
+        <ul>
+          <li>
+            <a href="https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/"
+              >W3C WCAG-EM evaluation methodology</a
+            >
+          </li>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG22/Understanding/"
+              >W3C Understanding WCAG 2.2</a
+            >
+          </li>
+          <li>
+            <a href="https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/"
+              >W3C ARIA Authoring Practices: Read Me First</a
+            >
+          </li>
+        </ul>
+      </section>
+      <footer>
+        Evidence Studio · <a href="/privacy">privacy</a> ·
+        <a href="/terms">terms</a> · not legal advice
+      </footer>
+    </main>
+  </body>
+</html>
