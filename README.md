@@ -4,7 +4,15 @@ Production marketing site and interactive premium product sample for Evidence St
 
 **Production:** <https://evidence-studio-site.pages.dev/>
 
-**Chrome Web Store:** <https://chromewebstore.google.com/detail/evidence-studio/afnfhhfbcbgagblgankihdfejaiccjdn>
+**Chrome Web Store:** <https://chromewebstore.google.com/detail/evidence-studio/afnfhhfbcbgagblgankihdfejaiccjdn?utm_source=github_readme&utm_medium=referral&utm_campaign=evidence_studio_launch>
+
+## Choose a path
+
+- **Try one project free:** install the public Chrome extension; no paid licence is needed for the first local project.
+- **Use it across client work:** [review the €99 one-time founding licence](https://evidence-studio-site.pages.dev/?utm_source=github_readme&utm_medium=referral&utm_campaign=evidence_studio_launch#founding) for unlimited local projects and client-ready exports. Gumroad shows the final amount and applicable tax before payment.
+- **Prove one team workflow:** [review the €750 fixed-scope agency pilot](https://evidence-studio-site.pages.dev/?utm_source=github_readme&utm_medium=referral&utm_campaign=evidence_studio_launch#agency). The pilot is agreed by email before payment and includes one anonymized workflow, a sample project, an export, written notes, and one licence.
+
+Evidence Studio is built and sold by Kuba Opoczka. The sample data is illustrative; there are no invented customer, sales, review, or performance claims.
 
 ## What is real
 
@@ -19,7 +27,7 @@ Production marketing site and interactive premium product sample for Evidence St
 - Cloudflare Pages security-header configuration
 - Legacy GitHub Pages workflow retained only as historical deployment configuration
 
-The sample data is clearly labelled. The site contains no invented customers, sales, reviews, or market claims.
+The sample data is clearly labelled.
 
 ## Run locally
 
