@@ -16,6 +16,7 @@ const javascript = readdirSync(assetsDirectory)
   .join("\n");
 const pilotHtml = readFileSync(pilotPath, "utf8");
 const fieldNoteHtml = readFileSync(fieldNotePath, "utf8");
+const homeHtml = readFileSync(resolve(outputDirectory, "index.html"), "utf8");
 
 const requiredSignals = [
   ["verified Gumroad checkout", "https://opoczka.gumroad.com/l/evidence-studio", javascript],
@@ -24,6 +25,9 @@ const requiredSignals = [
   ["pilot entry bundle", "assets/pilot-", pilotHtml],
   ["retestable findings field note", "Seven fields that make an accessibility finding retestable", fieldNoteHtml],
   ["field note author disclosure", "The checklist stands on its own and requires no product.", fieldNoteHtml],
+  ["free project structured offer", '"name": "Free — one local project"', homeHtml],
+  ["founding licence structured offer", '"name": "Founding auditor licence"', homeHtml],
+  ["Chrome Web Store structured download", "chromewebstore.google.com/detail/evidence-studio", homeHtml],
 ];
 
 const missingSignals = requiredSignals
@@ -34,4 +38,4 @@ if (missingSignals.length > 0) {
   throw new Error(`Production build assertion failed: missing ${missingSignals.join(", ")}.`);
 }
 
-console.log("Production build assertion passed: paid checkout, paid CTA, pilot entry, and vendor-neutral field note are present.");
+console.log("Production build assertion passed: paid checkout, offer schema, pilot entry, and vendor-neutral field note are present.");
