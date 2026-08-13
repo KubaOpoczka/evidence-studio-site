@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="A vendor-neutral seven-field record for accessibility findings that another evaluator can reproduce and retest without guessing."
+    />
+    <link
+      rel="canonical"
+      href="https://evidence-studio-site.pages.dev/field-notes/retestable-accessibility-findings"
+    />
+    <link rel="stylesheet" href="/field-guide.css" />
+    <title>Seven fields that make an accessibility finding retestable</title>
+    <meta
+      property="og:title"
+      content="Seven fields that make an accessibility finding retestable"
+    />
+    <meta
+      property="og:description"
+      content="A practical record for preserving tested state, user impact, evidence, scope and retest history."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2026-08-13" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to the field note</a>
+    <main class="wrap field-note" id="main-content">
+      <a class="brand" href="/"
+        ><img src="/assets/icon.png" alt="" />Evidence Studio field notes</a
+      >
+
+      <article>
+        <header>
+          <p class="eyebrow">Accessibility audit field note</p>
+          <h1>Seven fields that make an accessibility finding retestable</h1>
+          <p class="lede">
+            A retestable accessibility finding identifies the exact page or
+            product state tested, the effect on a disabled user’s task, the
+            shortest reliable reproduction, the evidence captured and
+            protected, where the issue repeats, what was and was not evaluated,
+            and a dated retest record. Another evaluator can then rerun the
+            check without guessing.
+          </p>
+          <div class="meta" aria-label="Publication details">
+            <span>6 minute read</span>
+            <span>published <time datetime="2026-08-13">13 August 2026</time></span>
+            <span>vendor-neutral method</span>
+          </div>
+        </header>
+
+        <aside class="callout" aria-label="Method boundary">
+          <p>
+            <strong>This is a practical record format, not a WCAG requirement.</strong>
+            WCAG 2.2 defines conformance requirements. WCAG-EM 2.0 is a broader
+            evaluation methodology and does not add to them. These seven fields
+            distil its guidance on samples, reproduction, evidence, repeated
+            issues, scope, evaluation specifics and later re-evaluation.
+          </p>
+        </aside>
+
+        <ol class="field-list">
+          <li>
+            <section aria-labelledby="tested-state">
+              <h2 id="tested-state">Tested page state</h2>
+              <p>
+                Record the URL or app path, page or view title, build and date,
+                authenticated role, and the state that exposed the barrier. Name
+                the open dialog, validation error, selected tab, process step or
+                dynamic content variation. A URL alone rarely identifies an
+                interactive state.
+              </p>
+              <p>
+                Add the conditions that could change the result: browser and
+                assistive-technology versions, viewport, zoom, language, colour
+                preferences, input method and any test data. WCAG-EM recommends
+                recording settings, inputs, actions and software versions so a
+                sample can be found and replicated later.
+              </p>
+            </section>
+          </li>
+
+          <li>
+            <section aria-labelledby="user-impact">
+              <h2 id="user-impact">User impact</h2>
+              <p>
+                Describe the task, the barrier and the consequence in plain
+                language: who encounters the problem, what they are trying to
+                do, what actually happens, and what should happen instead. Keep
+                a scanner message or criterion reference as supporting context,
+                not as the explanation of the human effect.
+              </p>
+              <p>
+                Be precise about the evidence you have. One observed experience
+                can reveal a real barrier, but it does not represent every person
+                with the same disability. W3C advises reporting the study scope,
+                methods and participant characteristics rather than generalising
+                from a limited evaluation.
+              </p>
+            </section>
+          </li>
+
+          <li>
+            <section aria-labelledby="shortest-reproduction">
+              <h2 id="shortest-reproduction">Shortest reliable reproduction</h2>
+              <p>
+                Start from a named state and list the fewest steps that reliably
+                expose the issue. Include the input method, exact control labels,
+                necessary values, expected result and actual result. Add a reset
+                condition when prior actions, cached data or focus placement can
+                change the outcome.
+              </p>
+              <p>
+                Short does not mean incomplete. For a multi-step process, record
+                the actions needed to move between views. WCAG-EM notes that the
+                URL alone is often insufficient to identify a sample within a
+                process.
+              </p>
+            </section>
+          </li>
+
+          <li>
+            <section aria-labelledby="protected-evidence">
+              <h2 id="protected-evidence">Protected evidence</h2>
+              <p>
+                Attach only the evidence needed to understand the finding: a
+                focused screenshot, DOM excerpt, short recording or tool result.
+                Connect it to the tested state and build. Add a text explanation
+                so the evidence remains understandable without relying on an
+                image, colour or annotation alone.
+              </p>
+              <p>
+                Inspect captures before sharing them. Screenshots, source,
+                credentials and copied data may expose personal or confidential
+                information. Redact the shareable copy under the project’s data
+                policy, and retain any controlled original only when there is a
+                defined reason, location and retention period.
+              </p>
+            </section>
+          </li>
+
+          <li>
+            <section aria-labelledby="repeated-occurrences">
+              <h2 id="repeated-occurrences">Repeated occurrences</h2>
+              <p>
+                Record every known location while keeping the shared issue easy
+                to fix once. Group occurrences only when the component, behavior
+                and corrective action are genuinely the same. If one instance
+                has a different state, implementation or user effect, keep it
+                separate.
+              </p>
+              <p>
+                WCAG-EM says repeated components do not normally need a full
+                re-evaluation on every occurrence unless they appear or behave
+                differently. It also calls it good practice to indicate issues
+                that recur. Preserve both facts: the shared cause and the places
+                where it was observed.
+              </p>
+            </section>
+          </li>
+
+          <li>
+            <section aria-labelledby="scope-limitations">
+              <h2 id="scope-limitations">Scope and limitations</h2>
+              <p>
+                State what the finding supports and what it does not. Include the
+                standard and level in scope, the evaluated sample, relevant test
+                conditions, exclusions, untested paths and known tool or method
+                limits. Distinguish a finding from a statement about the whole
+                product.
+              </p>
+              <p>
+                A sampled evaluation does not by itself prove that an entire
+                website conforms. WCAG-EM requires an unambiguous scope and warns
+                that evaluating a selected subset generally cannot support a
+                site-wide WCAG conformance claim.
+              </p>
+            </section>
+          </li>
+
+          <li>
+            <section aria-labelledby="retest-history">
+              <h2 id="retest-history">Retest history</h2>
+              <p>
+                Append a retest entry instead of replacing the original finding.
+                Record the date, build, evaluator, test conditions, result,
+                remaining occurrences and any changed reproduction step. Use
+                clear outcomes such as fixed, still present, partly fixed or not
+                retested, then explain the evidence behind the status.
+              </p>
+              <p>
+                Reusing relevant samples makes results easier to compare over
+                time. WCAG-EM explicitly supports rerunning an evaluation after
+                repairs or for periodic monitoring, while replacing some samples
+                when broader coverage is needed.
+              </p>
+            </section>
+          </li>
+        </ol>
+
+        <section class="record-template" aria-labelledby="copy-record">
+          <h2 id="copy-record">Copy the seven-field record</h2>
+          <dl>
+            <div><dt>Tested page state</dt><dd>Where, when, build, state and test conditions</dd></div>
+            <div><dt>User impact</dt><dd>Task, barrier, actual result and expected result</dd></div>
+            <div><dt>Reproduction</dt><dd>Starting state and shortest reliable steps</dd></div>
+            <div><dt>Protected evidence</dt><dd>Relevant capture or excerpt, with sensitive data handled</dd></div>
+            <div><dt>Occurrences</dt><dd>Known locations and evidence for any shared cause</dd></div>
+            <div><dt>Scope and limitations</dt><dd>What was evaluated, excluded and not established</dd></div>
+            <div><dt>Retest history</dt><dd>Dated result, conditions and remaining instances</dd></div>
+          </dl>
+        </section>
+
+        <aside class="disclosure" aria-label="Author disclosure">
+          <p>
+            This field note was written by Kuba Opoczka. The method also
+            informed Evidence Studio, a local audit-evidence workspace he built.
+            The checklist stands on its own and requires no product.
+          </p>
+        </aside>
+
+        <section class="sources" aria-labelledby="primary-sources">
+          <h2 id="primary-sources">Primary W3C sources</h2>
+          <ul>
+            <li>
+              <a href="https://www.w3.org/TR/wcag-em-2/"
+                >WCAG Evaluation Methodology (WCAG-EM) 2.0</a
+              >
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/WCAG22/"
+                >Web Content Accessibility Guidelines (WCAG) 2.2</a
+              >
+            </li>
+            <li>
+              <a href="https://www.w3.org/WAI/WCAG22/Understanding/"
+                >Understanding WCAG 2.2</a
+              >
+            </li>
+            <li>
+              <a href="https://www.w3.org/WAI/test-evaluate/involving-users/"
+                >Involving Users in Web Accessibility Evaluation</a
+              >
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <footer>
+        © 2026 Kuba Opoczka · practical guidance, not legal advice or a
+        conformance statement
+      </footer>
+    </main>
+  </body>
+</html>

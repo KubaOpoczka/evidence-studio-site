@@ -333,6 +333,12 @@ export default function App() {
             <h2 id="resources-title">Keep the finding and its proof together.</h2>
           </Reveal>
           <div className="resource-grid">
+            <a className="resource-link" href="/field-notes/retestable-accessibility-findings">
+              <span>Field note</span>
+              <h3>Seven fields that make a finding retestable</h3>
+              <p>A vendor-neutral record for page state, user impact, evidence, scope and retest history.</p>
+              <strong>Read the field note →</strong>
+            </a>
             <a className="resource-link" href="/accessibility-audit-evidence-checklist.html">
               <span>Checklist</span>
               <h3>Accessibility audit evidence checklist</h3>
